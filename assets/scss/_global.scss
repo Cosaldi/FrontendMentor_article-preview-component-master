@@ -1,5 +1,29 @@
-body {
-    font-family: "Manrope";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.main {}
+/// RESET
+
+li {
+    display: inline;
+    list-style-type: none;
+}
+
+button {
+    border: none;
+}
+
+///
+
+body {
+    background-color: $light-grayish-blue;
+    color: $very-dark-grayish-blue;
+    font-family: "Manrope";
+    word-spacing: 1px;
+}
+
+.main {
+    margin-top: 90px;
+}

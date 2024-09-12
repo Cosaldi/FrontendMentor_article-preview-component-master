@@ -1,37 +1,114 @@
 .card {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    max-width: 36rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+
     &__image {
-
-    }
-
-    &__title {
-
+        display: block;
+        width: 100%;
+        height: 12.5rem;
+        object-fit: cover;
     }
 
     &__text {
+        padding: 2.625rem 2rem 1.5rem;
+    }
 
+    &__title {
+        margin-bottom: 1.25rem;
+        font-size: $font-m;
+        font-weight: 700;
+        line-height: 1.5;
     }
 
     &__desc {
-
+        margin-bottom: 2rem;
+        color: $desaturated-dark-blue;
+        font-size: $font-s;
+        font-weight: 500;
     }
 
     &__author {
-
+        display: flex;
+        align-items: center;
     }
 
     &__avatar {
-
+        margin-right: 1rem;
+        width: 2.5rem;
+        border-radius: 50%;
     }
 
     &__name {
-
+        font-size: $font-s;
+        font-weight: 700;
     }
 
     &__date {
-
+        color: $grayish-blue;
+        font-size: $font-s;
+        font-weight: 500;
     }
 
     &__button {
-        
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: auto;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 3;
+
+        transition: 0.3s;
+
+        &.open {
+            background-color: $grayish-blue;
+        }
+
+        &.close {
+            background-color: $light-grayish-blue;
+        }
+    }
+
+    &__share {
+        display: flex;
+        align-items: center;
+        padding: 1.375rem 2rem 1.75rem 2rem;
+        width: 100%;
+
+        position: absolute;
+        bottom: 0;
+
+        visibility: hidden;
+        opacity: 0;
+
+        background-color: $very-dark-grayish-blue;
+
+        transition: 0.3s;
+
+        & p {
+            margin-right: 1.375rem;
+            color: $grayish-blue;
+            font-size: $font-s;
+            font-weight: 500;
+            letter-spacing: 0.3125rem;
+        }
+
+        & a:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
