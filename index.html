@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/style.css">
 
   <title>Frontend Mentor | Article preview component</title>
 
@@ -25,31 +26,31 @@
 
 <body>
 
-  <main>
-    <article>
-      <figure>
+  <main class="main">
+    <article class="card">
+      <figure class="card__image">
         <img src="images/drawers.jpg" alt="drawers">
       </figure>
-    </article>
-    <div>
-      <header>
-        <h1>Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home</h1>
-      </header>
       <div>
-        <p>Ever been in a room and felt like something was missing? Perhaps
-          it felt slightly bare and uninviting. I’ve got some simple tips
-          to help you make any room feel complete.</p>
-        <figure>
-          <img src="/images/avatar-michelle.jpg" alt="Michelle's avatar">
-          <figcaption>
-            <p>Michelle Appleton</p>
-            <p><time datetime="2020-06-28">28 Jun 2020</time></p>
-          </figcaption>
-          <button>Share</button>
-        </figure>
+        <header>
+          <h1 class="card__title">Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home</h1>
+        </header>
+        <div class="card__text">
+          <p class="card__desc">Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.</p>
+          <figure class="card__author">
+            <img class="card__avatar" src="/images/avatar-michelle.jpg" alt="Michelle's avatar">
+            <figcaption>
+              <p class="card__name">Michelle Appleton</p>
+              <p class="card__date"><time datetime="2020-06-28">28 Jun 2020</time></p>
+            </figcaption>
+            <button class="card__button">Share</button>
+          </figure>
+        </div>
       </div>
-    </div>
+    </article>
   </main>
   <footer>
     <div class="attribution">
