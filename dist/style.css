@@ -47,6 +47,7 @@ body {
   max-width: 36rem;
   background-color: #ffffff;
   border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.15);
 }
 @media (min-width: 48em) {
   .card {
