@@ -1,35 +1,62 @@
 .card {
+    display: flex;
+    flex-direction: column;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     position: relative;
-    overflow: hidden;
     max-width: 36rem;
     background-color: #ffffff;
     border-radius: 0.5rem;
+
+    @include breakpoints-up(md) {
+        flex-direction: row;
+        max-width: 45.75rem;
+        height: 17.5rem;
+    }
 
     &__image {
         display: block;
         width: 100%;
         height: 12.5rem;
         object-fit: cover;
+        border-radius: 0.5rem 0.5rem 0 0;
+
+        @include breakpoints-up(md) {
+            width: 17.8125rem;
+            height: 100%;
+            object-position: 0;
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
     }
 
     &__text {
         padding: 2.625rem 2rem 1.5rem;
+
+        @include breakpoints-up(md) {
+            padding: 2.125rem 2rem 1.5rem;
+        }
     }
 
     &__title {
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.125rem;
         font-size: $font-m;
         font-weight: 700;
         line-height: 1.5;
+
+        @include breakpoints-up(md) {
+            font-size: $font-l;
+        }
     }
 
     &__desc {
-        margin-bottom: 2rem;
+        margin-bottom: 1.875rem;
         color: $desaturated-dark-blue;
         font-size: $font-s;
         font-weight: 500;
+
+        @include breakpoints-up(md) {
+            margin-bottom: 1.25rem;
+        }
     }
 
     &__author {
@@ -83,16 +110,41 @@
         align-items: center;
         padding: 1.375rem 2rem 1.75rem 2rem;
         width: 100%;
-
         position: absolute;
         bottom: 0;
-
         visibility: hidden;
         opacity: 0;
-
         background-color: $very-dark-grayish-blue;
-
         transition: 0.3s;
+        border-radius: 0 0 0.5rem 0.5rem;
+
+        @include breakpoints-up(md) {
+            justify-content: center;
+            padding: 1.125rem 1rem 1rem;
+            width: 15.5rem;
+            border-radius: 0.5rem;
+            bottom: 5.9375rem;
+            right: 0.75rem;
+
+            &::after {
+                content: '';
+                background-color: $very-dark-grayish-blue;
+                width: 1.5rem;
+                height: 1.5rem;
+                transform: rotate(45deg);
+                position: absolute;
+                bottom: -0.75rem;
+                right: 1.5rem;
+            }
+        }
+
+        @include breakpoints-up(lg) {
+            right: -4.625rem;
+
+            &::after {
+                right: 6.875rem;
+            }
+        }
 
         & p {
             margin-right: 1.375rem;

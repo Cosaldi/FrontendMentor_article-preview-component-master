@@ -18,12 +18,21 @@ button {
 ///
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
     background-color: $light-grayish-blue;
     color: $very-dark-grayish-blue;
     font-family: "Manrope";
     word-spacing: 1px;
+
+    @include landscape-down(xs) {
+        height: 150dvh;
+    }
 }
 
 .main {
-    margin-top: 90px;
+    margin-bottom: 2rem;
 }

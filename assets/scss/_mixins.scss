@@ -1,3 +1,4 @@
+// XSmall 375px
 // Small   576px
 // Medium   768px
 // Large  992px
@@ -5,6 +6,7 @@
 // XXLarge  1400px
 
 $screen-up: (
+    "xs": "23.4375em",
     "sm": "36em", 
     "md": "48em", 
     "lg": "62em",
@@ -13,6 +15,7 @@ $screen-up: (
 );
 
 $screen-down: (
+    "xs": "23.375em",
     "sm": "35.9375em", 
     "md": "47.9375em", 
     "lg": "61.9375em",
@@ -32,8 +35,8 @@ $screen-down: (
     }
 }
 
-@mixin landspace-down($size) {
-    @media (max-height: map-get($screen-up, $size)) {
+@mixin landscape-down($size) {
+    @media (max-height: map-get($screen-down, $size)) {
         @content
     }
 }
