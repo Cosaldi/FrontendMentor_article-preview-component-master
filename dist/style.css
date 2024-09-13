@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Marope";
+  src: url("/assets/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  display: inline;
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(217, 19%, 35%);
+  font-family: "Manrope";
+  word-spacing: 1px;
+}
+@media (max-height: 23.375em) {
+  body {
+    height: 150dvh;
+  }
+}
+
+.main {
+  margin-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  position: relative;
+  max-width: 36rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
+@media (min-width: 48em) {
+  .card {
+    flex-direction: row;
+    max-width: 45.75rem;
+    height: 17.5rem;
+  }
+}
+.card__image {
+  display: block;
+  width: 100%;
+  height: 12.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+@media (min-width: 48em) {
+  .card__image {
+    width: 17.8125rem;
+    height: 100%;
+    -o-object-position: 0;
+       object-position: 0;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+}
+.card__text {
+  padding: 2.625rem 2rem 1.5rem;
+}
+@media (min-width: 48em) {
+  .card__text {
+    padding: 2.125rem 2rem 1.5rem;
+  }
+}
+.card__title {
+  margin-bottom: 1.125rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media (min-width: 48em) {
+  .card__title {
+    font-size: 1.25rem;
+  }
+}
+.card__desc {
+  margin-bottom: 1.875rem;
+  color: hsl(214, 17%, 51%);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+@media (min-width: 48em) {
+  .card__desc {
+    margin-bottom: 1.25rem;
+  }
+}
+.card__author {
+  display: flex;
+  align-items: center;
+}
+.card__avatar {
+  margin-right: 1rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.card__name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.card__date {
+  color: hsl(212, 23%, 69%);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+.card__button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 3;
+  transition: 0.3s;
+}
+.card__button.open {
+  background-color: hsl(212, 23%, 69%);
+}
+.card__button.close {
+  background-color: hsl(210, 46%, 95%);
+}
+.card__share {
+  display: flex;
+  align-items: center;
+  padding: 1.375rem 2rem 1.75rem 2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: hsl(217, 19%, 35%);
+  transition: 0.3s;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+@media (min-width: 48em) {
+  .card__share {
+    justify-content: center;
+    padding: 1.125rem 1rem 1rem;
+    width: 15.5rem;
+    border-radius: 0.5rem;
+    bottom: 5.9375rem;
+    right: 0.75rem;
+  }
+  .card__share::after {
+    content: "";
+    background-color: hsl(217, 19%, 35%);
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -0.75rem;
+    right: 1.5rem;
+  }
+}
+@media (min-width: 62em) {
+  .card__share {
+    right: -4.625rem;
+  }
+  .card__share::after {
+    right: 6.875rem;
+  }
+}
+.card__share p {
+  margin-right: 1.375rem;
+  color: hsl(212, 23%, 69%);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.3125rem;
+}
+.card__share a:not(:last-child) {
+  margin-right: 1rem;
+}
+.card__share.show {
+  visibility: visible;
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */
